@@ -31,7 +31,6 @@
       this.async(function () {
         for (var key in properties) {
           if (this[key.toLowerCase()]) {
-            console.log(properties[key].orig + ":" + this[key.toLowerCase()])
             this.parentNode.grid.applyAttribute(this.gridColumn, properties[key].orig, this[key.toLowerCase()], true);
           }
         }
