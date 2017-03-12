@@ -54,21 +54,11 @@
         },
 
         /**
-         * Try to destroy handsontable instance if hadn't been destroyed
+         * Try to destroy instance if hadn't been destroyed
          */
         detached: function () {
-
+            //this.grid.kill()
         },
-        ready: function () {
-        },
-
-        /**
-         * Register hooks
-         */
-        registerHooks: function () {
-
-        },
-
 
         attributeChanged: function () {
             this._onChanged();
