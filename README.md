@@ -17,6 +17,8 @@ Instructions
 * git checkout https://github.com/flexicious/flxs-webcomponents-data-grid/
 * bower install
 * Place your licensed copy of html treegrid (v 3.xx) in lib_private 
+
+
 In your head section:
 ```
     <script src="./bower_components/webcomponentsjs/webcomponents-lite.js"></script>
