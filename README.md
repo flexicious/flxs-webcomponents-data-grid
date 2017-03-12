@@ -17,7 +17,7 @@ Instructions
 * git checkout https://github.com/flexicious/flxs-webcomponents-data-grid/
 * bower install
 * Place your licensed copy of html treegrid (v 3.xx) in lib_private 
-In your <head> section:
+In your head section:
 ```
     <script src="./bower_components/webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="./bower_components/polymer/polymer.html">
@@ -25,7 +25,7 @@ In your <head> section:
     <link rel="import" href="src/flxs-webcomponents-data-grid-column.html" />
     <link rel="stylesheet" href="http://www.htmltreegrid.com/demo/flexicious/css/flexicious.css" type="text/css" />
 ```
-And then in your <body> section:
+And then in your body section:
 ```
     <template id="tpl" is="dom-bind">
         <flxs-webcomponents-data-grid dataProvider="{{ donuts }}" forcePagerRow="true" enablePaging="true" enableExport="true" style="width:800px;height:400px"
@@ -35,8 +35,8 @@ And then in your <body> section:
             <flxs-webcomponents-data-grid-column dataField="type" headerText="Type"></flxs-webcomponents-data-grid-column>
         </flxs-webcomponents-data-grid>
     </template>
-    
- And then in your <script> section:
+```    
+ And then in your script section:
 ```
     <script>
     
