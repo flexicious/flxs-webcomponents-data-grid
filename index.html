@@ -13,7 +13,7 @@
 <body style="width:100%;height:100%">
     <template id="tpl" is="dom-bind">
         <flxs-webcomponents-data-grid dataProvider="{{ donuts }}" forcePagerRow="true" enablePaging="true" enableExport="true" style="width:800px;height:400px"
-            creationComplete="[[creationComplete]]">
+            itemClick="[[itemClick]]">
             <flxs-webcomponents-data-grid-column type="checkbox"></flxs-webcomponents-data-grid-column>
             <flxs-webcomponents-data-grid-column dataField="id" headerText="ID" filterComboBoxDataProvider="{{donuts}}"></flxs-webcomponents-data-grid-column>
             <flxs-webcomponents-data-grid-column dataField="type" headerText="Type"></flxs-webcomponents-data-grid-column>
@@ -34,8 +34,8 @@
     window.addEventListener('dom-change', function () {
       var tpl = document.getElementById('tpl');
       tpl.donuts = donuts;
-      tpl.creationComplete =  function(evt){
-            alert("Created " + evt.id)
+      tpl.itemClick =  function(evt){
+            alert("Clicked On " + evt.item.id)
         }
     });
     </script>

@@ -207,7 +207,28 @@
   function SettingsParser() { }
 
   SettingsParser.getPropertiesAndBehaviors = function (template) {
+
     var behaviors = {}, properties = {};
+
+    var targetEvents = flexiciousNmsp[template.typeName].ALL_EVENTS;
+    if (!targetEvents) {
+      flexiciousNmsp[template.typeName].ALL_EVENTS = [];
+      for (var prop in flexiciousNmsp[template.typeName]) {
+        if (prop.indexOf("EVENT_") == 0) {
+          flexiciousNmsp[template.typeName].ALL_EVENTS.push(flexiciousNmsp[template.typeName][prop]);
+          var key=flexiciousNmsp[template.typeName][prop];
+          properties[key.toLowerCase()] = {
+            observer: '_onChanged',
+            orig: key
+          }
+        }
+      }
+      targetEvents = flexiciousNmsp[template.typeName].ALL_EVENTS;
+    }
+
+
+
+
 
     var templateGrid = template;
     for (var key in templateGrid) {
@@ -241,7 +262,7 @@
         }
       }
     }
-    return { behaviors: behaviors, properties: properties };
+    return { behaviors: behaviors, properties: properties, targetEvents: targetEvents };
   };
   flexiciousNmsp.SettingsParser = SettingsParser;
 } (window));

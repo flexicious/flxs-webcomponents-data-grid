@@ -3,6 +3,8 @@
     var gridPropsAndBehaviors = flexiciousNmsp.SettingsParser.getPropertiesAndBehaviors(template);
     var behaviors = gridPropsAndBehaviors.behaviors, properties = gridPropsAndBehaviors.properties;
 
+
+
     Polymer({
         is: 'flxs-webcomponents-data-grid',
         properties: properties,
@@ -47,7 +49,7 @@
                     }
                 }
 
-                if(this.grid.getColumnLevel()._tempCols.length){
+                if (this.grid.getColumnLevel()._tempCols.length) {
                     this.grid.getColumnLevel().setColumns(this.grid.getColumnLevel()._tempCols);
                 }
             }, 1);
