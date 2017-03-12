@@ -1,0 +1,25 @@
+{
+  "name": "flexicious-webcomponents-table",
+  "description": "Polymer Element wrapper for Flexicious HTMLTreeGrid",
+  "license": "MIT",
+  "main": "flex-datagrid.html",
+  "keywords": [
+    "polymer",
+    "web-components",
+    "datagrid",
+    "grid",
+    "table"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "examples",
+    "..",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.2.0"
+  }
+}
