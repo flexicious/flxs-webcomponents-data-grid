@@ -1,3 +1,6 @@
+PLEASE NOTE : THIS HAS BEEN MOVED TO:
+https://github.com/flexicious/flxs-webcomponents-tree-grid
+
 # flxs-webcomponents-data-grid
 Webcomponents DataGrid wrapper for flexicious DataGrid
 Welcome to HTMLTreeGrid DataGrid
